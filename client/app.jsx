@@ -8,6 +8,11 @@ Layout = React.createClass({
 });
 
 BlogList = React.createClass({
+  componentWillMount() {
+    var routeContext = FlowRouter.current();
+    // props is alos the routeContext
+    console.log(EJSON.equals(_.keys(routeContext), _.keys(this.props)));
+  },
   render() {
     return <div>
       This is the blog list:

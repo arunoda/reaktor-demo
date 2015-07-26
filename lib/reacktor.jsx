@@ -5,9 +5,6 @@ Reaktor = {
 };
 
 Router = React.createClass({
-  componentWillMount() {
-   
-  },
   render() {
     return <div>
       {this.props.children}
@@ -32,6 +29,7 @@ Route = React.createClass({
         _.each(layoutContent, function(value, key) {
           regions[key] = React.createElement(value, context);
         });
+
         ReactLayout.render(props.layout, regions);
       }
     };

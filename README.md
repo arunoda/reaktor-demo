@@ -26,8 +26,10 @@ And it got all the features of FlowRouter like triggers:
     </Router>
   );
 
-  function homePageLogger() {
-    console.log("we are on the home route");
+  function homePageLogger(context, redirect) {
+    if(context.queryParams.forwardToBlog) {
+      redirect("/blog");
+    }
   }
 ~~~
 

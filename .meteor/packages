@@ -8,5 +8,6 @@ meteor-platform
 autopublish
 insecure
 react
-meteorhacks:flow-router
 kadira:react-layout
+kadira:reaktor
+kadira:flow-router-ssr

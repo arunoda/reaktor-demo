@@ -12,6 +12,8 @@ BlogList = React.createClass({
     var routeContext = FlowRouter.current();
     // props is alos the routeContext
     console.log(EJSON.equals(_.keys(routeContext), _.keys(this.props)));
+    var postId = this.props.params.postId;
+    console.log("This is the PostId: ", postId);
   },
   render() {
     return <div>
@@ -25,6 +27,8 @@ BlogList = React.createClass({
 
 BlogPost = React.createClass({
   render() {
+    var postId = this.props.params.page;
+    console.log("This is the PostId: ", postId);
     return <div>
       <p><a href="/">Back</a></p>
       This is the blog post
